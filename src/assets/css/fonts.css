@@ -1,0 +1,8 @@
+/* --------------------------------------------------------
+/* ---- Fonts
+-------------------------------------------------------- */
+
+@font-face {
+	font-family: "Proxima-Nova";
+	src: url("../fonts/proxima-nova/Proxima-Nova.otf") format("truetype");
+}

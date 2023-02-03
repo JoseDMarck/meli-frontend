@@ -1,0 +1,86 @@
+.ml__searchBox {
+	width: 100%;
+	height: auto;
+}
+
+.ml__searchBox img {
+	width: 100%;
+	height: auto;
+}
+
+.ml__searchBox .center_content {
+	max-width: 800px;
+	height: auto;
+	padding: 10px 0px 10px 0px;
+	margin: 0 auto;
+}
+
+.ml__searchBox .center_content .logo {
+	width: 50px;
+	height: auto;
+	margin-right: 20px;
+	float: left;
+}
+
+.ml__searchBox .input_content {
+	width: 100%;
+	height: auto;
+	position: relative;
+}
+
+.ml__searchBox .closeIcon {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 8%;
+	top: 8px;
+	z-index: 99;
+	cursor: pointer;
+	color: #999999;
+}
+.ml__searchBox .closeIcon:hover {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	right: 8%;
+	top: 8px;
+	z-index: 99;
+	cursor: pointer;
+	color: #666666;
+}
+
+.ml__searchBox input {
+	width: 85%;
+	height: auto;
+	float: left;
+	border: 0px;
+	height: 35px;
+	position: relative;
+	padding: 10px;
+}
+
+.ml__searchBox input::placeholder {
+	color: #999999;
+}
+
+.ml__searchBox input:focus {
+	outline: none;
+}
+
+.ml__searchBox .searchBTN {
+	width: 35px;
+	height: 35px;
+	float: left;
+	border: 0px;
+	position: relative;
+	background-color: #eeeeee;
+
+	text-align: center;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.ml__searchBox .searchBTN svg {
+	position: relative;
+	top: 5px;
+}

@@ -1,0 +1,47 @@
+.text-yellow {
+	color: #ffe600;
+}
+
+.text-black {
+	color: #333333;
+}
+
+.text-1st-gray {
+	color: #666666;
+}
+
+.text-2nd-gray {
+	color: #999999;
+}
+
+.text-3rd-gray {
+	color: #eeeeee;
+}
+
+.text-blue {
+	color: #3483fa;
+}
+
+.bg-yellow {
+	background-color: #ffe600;
+}
+
+.bg-black {
+	background-color: #333333;
+}
+
+.bg-1st-gray {
+	background-color: #666666;
+}
+
+.bg-2nd-gray {
+	background-color: #999999;
+}
+
+.bg-3rd-gray {
+	background-color: #eeeeee;
+}
+
+.bg-blue {
+	background-color: #3483fa;
+}

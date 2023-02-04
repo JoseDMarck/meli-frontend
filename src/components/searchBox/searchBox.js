@@ -52,6 +52,25 @@ function SearchBox() {
 						/>
 
 						<Renderif isTrue={state.searchValue.length >= 3}>
+							<div className="searchList">
+								<li className="transition pointer">
+									<BsSearch className="transition" />
+									iphone 13 pro max
+								</li>
+								<li className="transition pointer">
+									<BsSearch className="transition" />
+									iphone 13 pro max
+								</li>
+								<li className="transition pointer">
+									<BsSearch className="transition" />
+									iphone 13 pro max
+								</li>
+								<li className="transition pointer">
+									<BsSearch className="transition" />
+									iphone 13 pro max
+								</li>
+							</div>
+
 							<div className="closeIcon">
 								<CgCloseO
 									onClick={() =>
@@ -63,12 +82,13 @@ function SearchBox() {
 								/>
 							</div>
 						</Renderif>
-					</div>
 
-					<div className="searchBTN">
-						<BsSearch className="text-1st-gray" />
+						<div className="searchBTN">
+							<BsSearch className="text-1st-gray" />
+						</div>
+
+						<div className="clear"></div>
 					</div>
-					<div className="clear"></div>
 				</div>
 			</div>
 		</>

@@ -12,6 +12,7 @@ import "./assets/css/colors.css";
 import "./assets/css/utilities.css";
 import "./assets/css/antdCustom.css";
 import "./assets/css/buttons.css";
+import "./assets/css/grids.css";
 import Renderif from "./components/Renderif";
 import AuthState from "./states/authState";
 import AuthContext from "./context/authContext";
@@ -22,6 +23,7 @@ import ComponentState from "./states/componentState";
 import ModalMessage from "./components/modals/response/MessageModal";
 
 import Dastboard from "./pages/dashboard/Dashboard";
+import Product from "./pages/product/Product";
 
 import { Layout } from "antd";
 const { Sider, Content } = Layout;
@@ -52,6 +54,12 @@ function App() {
 												exact
 												path="/"
 												element={<Dastboard />}
+											/>
+
+											<Route
+												exact
+												path="product"
+												element={<Product />}
 											/>
 										</Routes>
 										<RolRouter></RolRouter>

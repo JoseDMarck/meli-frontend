@@ -5,18 +5,14 @@ import "../../assets/css/components/searchResults.css";
 import { BsHeart } from "react-icons/bs";
 import defaultImg from "../../assets/images/generals/default.png";
 import Renderif from "../Renderif";
+import ProductNav from "../productNav/ProductNav";
 
 function SearchResults() {
 	return (
 		<>
-			<div className="ml__searchResults bg-3rd-gray">
-				<div className="navDetail text-2nd-gray	">
-					{
-						"Electronica, audio y video > Pod > Repoductores > iPod Touch > 32Gb "
-					}
-				</div>
-
-				<div className="contentResults bg-white ">
+			<div className="ml__mainContent bg-3rd-gray">
+				<ProductNav />
+				<div className="fullContent bg-white ">
 					<div className="itemsResultscontent transition pointer">
 						<div
 							className="picture"
@@ -43,9 +39,7 @@ function SearchResults() {
 
 						<div className="clear" />
 					</div>
-				</div>
 
-				<div className="contentResults bg-white ">
 					<div className="itemsResultscontent transition pointer">
 						<div
 							className="picture"

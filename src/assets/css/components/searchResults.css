@@ -1,11 +1,4 @@
-.ml__searchResults {
-	max-width: 1024px;
-	height: auto;
-	position: relative;
-	margin: 0 auto;
-}
-
-.ml__searchResults .navDetail {
+.navDetail {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -14,28 +7,21 @@
 	line-height: 14px;
 }
 
-.ml__searchResults .contentResults {
-	width: 100%;
-	height: auto;
-	position: relative;
-	padding: 16px;
-	border-radius: 4px;
-}
-
-.ml__searchResults .itemsResultscontent {
+.itemsResultscontent {
 	width: 100%;
 	height: auto;
 	position: relative;
 	padding-bottom: 16px;
 	border-bottom: 1px solid #eeeeee;
+	margin-bottom: 16px;
 	box-shadow: rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px;
 }
 
-.ml__searchResults .itemsResultscontent:hover {
+.itemsResultscontent:hover {
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
-.ml__searchResults .itemsResultscontent .picture {
+.itemsResultscontent .picture {
 	width: 180px;
 	height: 180px;
 	position: relative;
@@ -61,7 +47,7 @@
 	opacity: 0;
 }
 
-.ml__searchResults .itemsResultscontent:hover .likeIcon {
+.itemsResultscontent:hover .likeIcon {
 	opacity: 1;
 }
 
@@ -69,19 +55,19 @@
 	color: #ca2127;
 }
 
-.ml__searchResults .itemsResultscontent .likeIcon svg {
+.itemsResultscontent .likeIcon svg {
 	position: relative;
 	top: 3px;
 }
 
-.ml__searchResults .itemsResultscontent .productDetails {
+.itemsResultscontent .productDetails {
 	width: 60%;
 	height: auto;
 	position: relative;
 	float: left;
 }
 
-.ml__searchResults .itemsResultscontent .productDetails .price {
+.itemsResultscontent .productDetails .price {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -89,7 +75,7 @@
 	font-size: 32px;
 	line-height: 32px;
 }
-.ml__searchResults .itemsResultscontent .productDetails .title {
+.itemsResultscontent .productDetails .title {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -97,7 +83,7 @@
 	line-height: 18px;
 }
 
-.ml__searchResults .itemsResultscontent .productDetails .other_info {
+.itemsResultscontent .productDetails .other_info {
 	width: 100%;
 	height: auto;
 	position: relative;
@@ -105,7 +91,7 @@
 	line-height: 18px;
 }
 
-.ml__searchResults .itemsResultscontent .seller_info {
+.itemsResultscontent .seller_info {
 	width: 20%;
 	height: auto;
 	position: relative;

@@ -1,0 +1,14 @@
+.ml__mainContent {
+	max-width: 1180px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.fullContent {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 16px 16px 1px 16px;
+	border-radius: 4px;
+}

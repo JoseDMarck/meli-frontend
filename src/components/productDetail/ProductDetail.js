@@ -4,6 +4,7 @@ import "antd/dist/antd.css";
 import "../../assets/css/components/productDetails.css";
 import { BsHeart } from "react-icons/bs";
 import defaultImg from "../../assets/images/generals/default.png";
+import GeneralButton from "../buttons/GeneralButton";
 import ProductNav from "../productNav/ProductNav";
 
 function ProductDetail() {
@@ -20,26 +21,32 @@ function ProductDetail() {
 					></div>
 
 					<div className="productDetails">
-						<div className="aditionalInfo">
+						<div className="aditionalInfo text-3nd-gray">
 							Nuevo - 234 Vendidos
 						</div>
 
-						<div className="productTitle">
+						<div className="productTitle text-3nd-gray">
 							Deco Reverse Sombrero Oxford
 						</div>
 
 						<div className="producPrice">$1.980</div>
-						<div className="btn">Comprar</div>
+						<div className="btn">
+							<GeneralButton
+								className="btn__normal btn__blue transition mr-10"
+								title="Comprar"
+								onClick={() => console.log("comprar...")}
+							/>
+						</div>
 					</div>
 
 					<div className="clear" />
 
-					<div className="productDescription">
-						<div className="descriptionTitle">
+					<div className="productDescription ">
+						<div className="descriptionTitle text-3nd-gray">
 							Descripción del producto
 						</div>
 
-						<div className="descriptionInfo">
+						<div className="descriptionInfo text-2nd-gray">
 							Lorem ipsum dolor sit amet, consectetur adipiscing
 							elit, sed do eiusmod tempor incididunt ut labore et
 							dolore magna aliqua. Ut enim ad minim ven Lorem

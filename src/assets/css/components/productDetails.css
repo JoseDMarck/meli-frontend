@@ -1,4 +1,4 @@
-.ml__mainContent .pictureContainer {
+.ml__details .pictureContainer {
 	width: 680px;
 	height: 680px;
 	position: relative;
@@ -10,13 +10,13 @@
 	margin: 32px 16px 32px 32px;
 }
 
-.ml__mainContent .productDetails {
+.ml__details .productDetails {
 	width: 35%;
 	height: auto;
 	float: right;
 }
 
-.ml__mainContent .aditionalInfo {
+.ml__details .aditionalInfo {
 	width: 100%;
 	height: auto;
 	font-size: 14px;
@@ -24,29 +24,31 @@
 	margin: 32px 0px 16px 0px;
 }
 
-.ml__mainContent .productTitle {
+.ml__details .productTitle {
 	width: 50%;
 	height: auto;
 	font-size: 24px;
 	line-height: 30px;
+	font-weight: 600;
 	margin-bottom: 32px;
 }
 
-.ml__mainContent .producPrice {
+.ml__details .producPrice {
 	width: 100%;
 	height: auto;
 	font-size: 46px;
 	line-height: 46px;
+
 	margin-bottom: 32px;
 }
 
-.ml__mainContent .productDescription {
+.ml__details .productDescription {
 	max-width: 680px;
 	margin-left: 32px;
 	margin-bottom: 32px;
 }
 
-.ml__mainContent .productDescription .descriptionTitle {
+.ml__details .productDescription .descriptionTitle {
 	width: 100%;
 	height: auto;
 	font-size: 28px;
@@ -54,7 +56,7 @@
 	margin-bottom: 32px;
 }
 
-.ml__mainContent .productDescription .descriptionInfo {
+.ml__details .productDescription .descriptionInfo {
 	width: 100%;
 	height: auto;
 	font-size: 16px;

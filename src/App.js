@@ -11,7 +11,7 @@ import "./assets/css/fonts.css";
 import "./assets/css/colors.css";
 import "./assets/css/utilities.css";
 import "./assets/css/antdCustom.css";
-import "./assets/css/buttons.css";
+import "./assets/css/components/buttons.css";
 import "./assets/css/grids.css";
 import Renderif from "./components/Renderif";
 import AuthState from "./states/authState";

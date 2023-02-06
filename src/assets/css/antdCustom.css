@@ -5,6 +5,10 @@
 	width: 283px !important;
 }
 
+.ant-layout {
+	background-color: #eeeeee !important;
+}
+
 .ant-empty-description {
 	color: #fff !important;
 }

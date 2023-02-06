@@ -10,7 +10,7 @@
 }
 
 .ml__searchBox .center_content {
-	max-width: 800px;
+	max-width: 1024px;
 	height: auto;
 	padding: 10px 0px 10px 0px;
 	margin: 0 auto;
@@ -23,8 +23,8 @@
 	float: left;
 }
 
-.ml__searchBox .input_content {
-	width: 100%;
+.ml__searchBox .content_search {
+	width: 90%;
 	height: auto;
 	position: relative;
 }
@@ -33,7 +33,7 @@
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	right: 8%;
+	right: 6%;
 	top: 8px;
 	z-index: 99;
 	cursor: pointer;
@@ -43,21 +43,26 @@
 	width: 10px;
 	height: 10px;
 	position: absolute;
-	right: 8%;
+	right: 6%;
 	top: 8px;
 	z-index: 99;
 	cursor: pointer;
-	color: #666666;
+	color: #3483fa;
+}
+
+.ml__searchBox .inputBlock {
+	width: 90%;
+	height: 35px;
+	float: left;
+	position: relative;
 }
 
 .ml__searchBox input {
-	width: 85%;
-	height: auto;
-	float: left;
-	border: 0px;
+	width: 100%;
 	height: 35px;
 	position: relative;
 	padding: 10px;
+	border: 0px;
 }
 
 .ml__searchBox input::placeholder {
@@ -71,14 +76,23 @@
 .ml__searchBox .searchBTN {
 	width: 35px;
 	height: 35px;
-	float: left;
-	border: 0px;
-	position: relative;
-	background-color: #eeeeee;
-
-	text-align: center;
 	font-size: 18px;
+	text-align: center;
 	cursor: pointer;
+	background-color: #eeeeee;
+	border: 0px;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+.ml__searchBox .searchBTN:hover {
+	background-color: #3483fa;
+	color: #fff;
+}
+
+.ml__searchBox .searchBTN:hover svg {
+	color: #fff;
 }
 
 .ml__searchBox .searchBTN svg {
@@ -87,15 +101,14 @@
 }
 
 .ml__searchBox .searchList {
-	width: 85%;
+	width: 100%;
 	height: auto;
 	background-color: #fff;
 	position: absolute;
 	top: 35px;
-	left: 20px;
-	right: 0px;
-	margin: 0 auto;
 	border-top: 1px solid #eeeeee;
+	z-index: 2;
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
 .ml__searchBox .searchList li {

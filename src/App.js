@@ -15,6 +15,8 @@ import "./assets/css/buttons.css";
 import Renderif from "./components/Renderif";
 import AuthState from "./states/authState";
 import AuthContext from "./context/authContext";
+import ProductState from "./states/productsState";
+
 import UsersState from "./states/userState";
 import ComponentState from "./states/componentState";
 import ModalMessage from "./components/modals/response/MessageModal";
@@ -39,22 +41,24 @@ function App() {
 			<AuthState>
 				<ComponentState>
 					<UsersState>
-						<Layout className="bg-black">
-							<Router>
-								<ModalMessage />
+						<ProductState>
+							<Layout className="bg-3rd-gray">
+								<Router>
+									<ModalMessage />
 
-								<Content>
-									<Routes>
-										<Route
-											exact
-											path="/"
-											element={<Dastboard />}
-										/>
-									</Routes>
-									<RolRouter></RolRouter>
-								</Content>
-							</Router>
-						</Layout>
+									<Content>
+										<Routes>
+											<Route
+												exact
+												path="/"
+												element={<Dastboard />}
+											/>
+										</Routes>
+										<RolRouter></RolRouter>
+									</Content>
+								</Router>
+							</Layout>
+						</ProductState>
 					</UsersState>
 				</ComponentState>
 			</AuthState>

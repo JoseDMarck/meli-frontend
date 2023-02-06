@@ -1,0 +1,117 @@
+.ml__searchResults {
+	max-width: 1024px;
+	height: auto;
+	position: relative;
+	margin: 0 auto;
+}
+
+.ml__searchResults .navDetail {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 16px 0px 16px 0px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.ml__searchResults .contentResults {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding: 16px;
+	border-radius: 4px;
+}
+
+.ml__searchResults .itemsResultscontent {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #eeeeee;
+	box-shadow: rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px;
+}
+
+.ml__searchResults .itemsResultscontent:hover {
+	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.ml__searchResults .itemsResultscontent .picture {
+	width: 180px;
+	height: 180px;
+	position: relative;
+	float: left;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-right: 16px;
+}
+
+.likeIcon {
+	width: 28px;
+	height: 28px;
+	border-radius: 50%;
+	background-color: hsla(0, 0%, 100%, 0.7);
+	right: 8px;
+	top: 8px;
+	position: absolute;
+	color: #3483fa;
+	text-align: center;
+	font-size: 18px;
+	opacity: 0;
+}
+
+.ml__searchResults .itemsResultscontent:hover .likeIcon {
+	opacity: 1;
+}
+
+.likeIcon:hover {
+	color: #ca2127;
+}
+
+.ml__searchResults .itemsResultscontent .likeIcon svg {
+	position: relative;
+	top: 3px;
+}
+
+.ml__searchResults .itemsResultscontent .productDetails {
+	width: 60%;
+	height: auto;
+	position: relative;
+	float: left;
+}
+
+.ml__searchResults .itemsResultscontent .productDetails .price {
+	width: 100%;
+	height: auto;
+	position: relative;
+	margin: 20px 0px 10px 0px;
+	font-size: 32px;
+	line-height: 32px;
+}
+.ml__searchResults .itemsResultscontent .productDetails .title {
+	width: 100%;
+	height: auto;
+	position: relative;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.ml__searchResults .itemsResultscontent .productDetails .other_info {
+	width: 100%;
+	height: auto;
+	position: relative;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.ml__searchResults .itemsResultscontent .seller_info {
+	width: 20%;
+	height: auto;
+	position: relative;
+	float: right;
+	text-align: center;
+	margin: 20px 0px 10px 0px;
+	font-size: 12px;
+	line-height: 12px;
+}

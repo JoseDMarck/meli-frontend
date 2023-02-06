@@ -2,6 +2,11 @@ body {
 	background-color: #eeeeee !important;
 }
 
+img {
+	width: 100%;
+	height: auto;
+}
+
 .transition {
 	-webkit-transition: all 0.5s ease;
 	-moz-transition: all 0.5s ease;
@@ -52,4 +57,8 @@ body {
 
 .pointer {
 	cursor: pointer;
+}
+
+.bx-shadow-1 {
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }

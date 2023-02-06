@@ -31,7 +31,7 @@ function SearchBox() {
 
 	return (
 		<>
-			<div className="ml__searchBox bg-yellow">
+			<div className="ml__searchBox bg-yellow bx-shadow-1">
 				<div className="center_content">
 					<div className="logo">
 						<img
@@ -41,52 +41,54 @@ function SearchBox() {
 						/>
 					</div>
 
-					<div className="input_content">
-						<input
-							type="text"
-							name="search"
-							placeholder="Núnca dejes de buscar"
-							value={state?.searchValue}
-							onChange={onSearch}
-							maxLength={20}
-						/>
+					<div className="content_search">
+						<div className="inputBlock">
+							<input
+								type="text"
+								name="search"
+								placeholder="Núnca dejes de buscar"
+								value={state?.searchValue}
+								onChange={onSearch}
+								maxLength={20}
+							/>
 
-						<Renderif isTrue={state.searchValue.length >= 3}>
-							<div className="searchList">
-								<li className="transition pointer">
-									<BsSearch className="transition" />
-									iphone 13 pro max
-								</li>
-								<li className="transition pointer">
-									<BsSearch className="transition" />
-									iphone 13 pro max
-								</li>
-								<li className="transition pointer">
-									<BsSearch className="transition" />
-									iphone 13 pro max
-								</li>
-								<li className="transition pointer">
-									<BsSearch className="transition" />
-									iphone 13 pro max
-								</li>
+							<Renderif isTrue={state.searchValue.length >= 3}>
+								<div className="searchList">
+									<li className="transition pointer">
+										<BsSearch className="transition" />
+										iphone 13 pro max
+									</li>
+									<li className="transition pointer">
+										<BsSearch className="transition" />
+										iphone 13 pro max
+									</li>
+									<li className="transition pointer">
+										<BsSearch className="transition" />
+										iphone 13 pro max
+									</li>
+									<li className="transition pointer">
+										<BsSearch className="transition" />
+										iphone 13 pro max
+									</li>
+								</div>
+
+								<div className="closeIcon">
+									<CgCloseO
+										onClick={() =>
+											setState({
+												...state,
+												searchValue: "",
+											})
+										}
+									/>
+								</div>
+							</Renderif>
+
+							<div className="searchBTN transition">
+								<BsSearch className="text-1st-gray transition" />
 							</div>
-
-							<div className="closeIcon">
-								<CgCloseO
-									onClick={() =>
-										setState({
-											...state,
-											searchValue: "",
-										})
-									}
-								/>
-							</div>
-						</Renderif>
-
-						<div className="searchBTN">
-							<BsSearch className="text-1st-gray" />
+							<div className="clear"></div>
 						</div>
-
 						<div className="clear"></div>
 					</div>
 				</div>

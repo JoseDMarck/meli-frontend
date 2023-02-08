@@ -116,6 +116,16 @@ function SearchBox() {
 													<li
 														className="transition pointer"
 														key={product.title}
+														onClick={() => {
+															setProductState({
+																...productState,
+																productsID:
+																	product.id,
+															});
+															navigate(
+																`/items/${product.id}`
+															);
+														}}
 													>
 														<BsSearch className="transition" />
 														{product.title}

@@ -6,6 +6,7 @@ import ProductContext from "../context/productContext";
 const ProductState = ({ children }) => {
 	const [productState, setProductState] = useState({
 		products: [],
+		productsID: "",
 		searchWords: "",
 		emptyMessage: "Realiza una busqueda del producto soñado",
 		productsUpdate: false,

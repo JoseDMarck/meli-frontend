@@ -2,7 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useContext, useState } from "react";
 import "antd/dist/antd.css";
-import { Empty } from "antd";
+import { Empty, Tooltip } from "antd";
 import "../../assets/css/components/searchResults.css";
 import { useNavigate } from "react-router-dom";
 import { BsHeart } from "react-icons/bs";
@@ -18,9 +18,6 @@ function SearchResults() {
 	const navigate = useNavigate();
 
 	const { productState, setProductState } = useContext(ProductContext);
-	const [state, setState] = useState({
-		products: [],
-	});
 
 	useEffect(() => {
 		const data = async () => {
@@ -49,7 +46,13 @@ function SearchResults() {
 								<div
 									className="itemsResultscontent transition pointer"
 									key={product.id}
-									onClick={() => navigate(`/product`)}
+									onClick={() => {
+										setProductState({
+											...productState,
+											productsID: product.id,
+										});
+										navigate(`/items/${product.id}`);
+									}}
 								>
 									<div
 										className="picture"
@@ -74,9 +77,14 @@ function SearchResults() {
 													true
 												}
 											>
-												<span className="freeshiping pulse">
-													<HiOutlineTruck />
-												</span>
+												<Tooltip
+													placement="topLeft"
+													title="Envío Gratis"
+												>
+													<span className="freeshiping pulse">
+														<HiOutlineTruck />
+													</span>
+												</Tooltip>
 											</Renderif>
 										</div>
 										<div className="title">

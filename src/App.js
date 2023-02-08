@@ -59,7 +59,7 @@ function App() {
 
 											<Route
 												exact
-												path="product"
+												path="/items/:id"
 												element={<Product />}
 											/>
 											<Route

@@ -5,7 +5,7 @@ import SearchResults from "../../components/searchResults/SearchResults";
 
 import { Service } from "../../services/api";
 
-function Dashboard() {
+function Search() {
 	useEffect(() => {
 		const data = async () => {};
 
@@ -22,4 +22,4 @@ function Dashboard() {
 	);
 }
 
-export default Dashboard;
+export default Search;

@@ -24,6 +24,7 @@ import ModalMessage from "./components/modals/response/MessageModal";
 
 import Dastboard from "./pages/dashboard/Dashboard";
 import Product from "./pages/product/Product";
+import Search from "./pages/search/Search";
 
 import { Layout } from "antd";
 const { Sider, Content } = Layout;
@@ -61,8 +62,14 @@ function App() {
 												path="product"
 												element={<Product />}
 											/>
+											<Route
+												exact
+												path="/items"
+												element={<Search />}
+											/>
 										</Routes>
-										<RolRouter></RolRouter>
+
+										{/* <RolRouter></RolRouter> */}
 									</Content>
 								</Router>
 							</Layout>

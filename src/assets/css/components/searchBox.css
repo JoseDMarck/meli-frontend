@@ -21,12 +21,15 @@
 	height: auto;
 	margin-right: 20px;
 	float: left;
+	position: relative;
+	z-index: 2;
 }
 
 .ml__searchBox .content_search {
 	width: 90%;
 	height: auto;
 	position: relative;
+	z-index: 1;
 }
 
 .ml__searchBox .closeIcon {
@@ -109,6 +112,12 @@
 	border-top: 1px solid #eeeeee;
 	z-index: 2;
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.ml__searchBox Button {
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
 }
 
 .ml__searchBox .searchList li {

@@ -9,6 +9,7 @@
 	background-color: #eeeeee !important;
 }
 
-.ant-empty-description {
-	color: #fff !important;
+.ant-empty {
+	color: #999999 !important;
+	margin-bottom: 30px !important;
 }

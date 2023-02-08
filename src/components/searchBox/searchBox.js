@@ -4,36 +4,75 @@ import "antd/dist/antd.css";
 import "../../assets/css/components/searchBox.css";
 import { BsSearch } from "react-icons/bs";
 import { CgCloseO } from "react-icons/cg";
+import { useNavigate } from "react-router-dom";
+import { Service } from "../../services/api";
 import meliLogo from "../../assets/images/logos/Logo_ML@2x.png";
+import GeneralButton from "../buttons/GeneralButton";
 import Renderif from "../Renderif";
+import ProductContext from "../../context/productContext";
 
 function SearchBox() {
+	const navigate = useNavigate();
+
+	const { productState, setProductState } = useContext(ProductContext);
+
 	const [state, setState] = useState({
 		searchValue: "",
 		searchIcon: false,
 	});
 
-	const onSearch = (event) => {
+	const onSearch = async (event) => {
+		event.preventDefault();
 		if (event.target.name === "search") {
 			const onlyText = event.target.value.replace(
 				/[^A-Za-z0-9' ']/gi,
 				""
 			);
 
-			console.log("onlyText", onlyText);
-
 			setState({
-				...state,
 				searchValue: onlyText,
 			});
+
+			if (onlyText.length > 3) {
+				let _searchToList = await Service(
+					"GET",
+					`items/search/pagination/${onlyText}/4/0`
+				);
+
+				setProductState({
+					...productState,
+					productsList: _searchToList.data.response,
+					searchWords: onlyText,
+				});
+			}
 		}
+	};
+
+	const searchProducts = async () => {
+		let _search = await Service(
+			"GET",
+			`items/search/pagination/${state?.searchValue}/${productState?.limit}/${productState?.offset}`
+		);
+		console.log("search ****", _search);
+
+		setProductState({
+			...productState,
+			products: _search.data.response,
+			searchWords: productState.searchWords,
+		});
+
+		setState({
+			searchValue: "",
+		});
+
+		navigate(`/items?search=${productState.searchWords}`);
 	};
 
 	return (
 		<>
 			<div className="ml__searchBox bg-yellow bx-shadow-1">
 				<div className="center_content">
-					<div className="logo">
+					<div className="logo pointer" onClick={() => navigate(`/`)}>
 						<img
 							className="d-none d-lg-block"
 							src={meliLogo}
@@ -46,30 +85,41 @@ function SearchBox() {
 							<input
 								type="text"
 								name="search"
-								placeholder="Núnca dejes de buscar"
+								placeholder="Nunca dejes de buscar"
 								value={state?.searchValue}
 								onChange={onSearch}
 								maxLength={20}
 							/>
 
-							<Renderif isTrue={state.searchValue.length >= 3}>
+							<Renderif
+								isTrue={
+									state.searchValue.length >= 3 &&
+									productState.productsList?.items?.length >=
+										0
+								}
+							>
 								<div className="searchList">
-									<li className="transition pointer">
-										<BsSearch className="transition" />
-										iphone 13 pro max
-									</li>
-									<li className="transition pointer">
-										<BsSearch className="transition" />
-										iphone 13 pro max
-									</li>
-									<li className="transition pointer">
-										<BsSearch className="transition" />
-										iphone 13 pro max
-									</li>
-									<li className="transition pointer">
-										<BsSearch className="transition" />
-										iphone 13 pro max
-									</li>
+									{productState.productsList?.items?.map(
+										(product, index) => {
+											return (
+												<>
+													<li
+														className="transition pointer"
+														key={product.title}
+													>
+														<BsSearch className="transition" />
+														{product.title}
+													</li>
+												</>
+											);
+										}
+									)}
+
+									<GeneralButton
+										className="btn__normal btn__BigSize btn__blue transition mr-10"
+										title="Realizar Búsqueda"
+										onClick={() => searchProducts()}
+									/>
 								</div>
 
 								<div className="closeIcon">
@@ -84,7 +134,12 @@ function SearchBox() {
 								</div>
 							</Renderif>
 
-							<div className="searchBTN transition">
+							<div
+								className="searchBTN transition"
+								onClick={() => {
+									searchProducts();
+								}}
+							>
 								<BsSearch className="text-1st-gray transition" />
 							</div>
 							<div className="clear"></div>

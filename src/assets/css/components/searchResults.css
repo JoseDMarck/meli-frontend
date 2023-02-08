@@ -17,6 +17,37 @@
 	box-shadow: rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px;
 }
 
+.itemsResultscontent .freeshiping {
+	width: 22px;
+	height: 22px;
+	display: inline-block;
+	background-color: #1ed760;
+	border-radius: 50%;
+	font-size: 18px;
+	line-height: 18px;
+	text-align: center;
+	position: relative;
+	top: -3px;
+}
+
+.itemsResultscontent .freeshiping svg {
+	position: relative;
+	top: 2px;
+}
+
+.pulse {
+	animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(30, 215, 96, 0.2);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(30, 215, 96, 0);
+	}
+}
+
 .itemsResultscontent:hover {
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }

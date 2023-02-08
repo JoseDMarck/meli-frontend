@@ -11,7 +11,7 @@ function ProductNav() {
 	return (
 		<>
 			<div className="navDetail text-2nd-gray	">
-				<Renderif isTrue={productState.products?.length > 0}>
+				<Renderif isTrue={productState.displayNav}>
 					{
 						"Electronica, audio y video > Pod > Repoductores > iPod Touch > 32Gb "
 					}

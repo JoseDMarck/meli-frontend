@@ -58,6 +58,7 @@ function SearchBox() {
 		setProductState({
 			...productState,
 			products: _search.data.response,
+			displayNav: true,
 			searchWords: productState.searchWords,
 		});
 
@@ -68,11 +69,20 @@ function SearchBox() {
 		navigate(`/items?search=${productState.searchWords}`);
 	};
 
+	const goToHome = () => {
+		navigate(`/`);
+		setProductState({
+			...productState,
+			displayNav: false,
+			products: [],
+		});
+	};
+
 	return (
 		<>
 			<div className="ml__searchBox bg-yellow bx-shadow-1">
 				<div className="center_content">
-					<div className="logo pointer" onClick={() => navigate(`/`)}>
+					<div className="logo pointer" onClick={() => goToHome()}>
 						<img
 							className="d-none d-lg-block"
 							src={meliLogo}

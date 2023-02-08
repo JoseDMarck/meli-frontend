@@ -7,11 +7,12 @@ const ProductState = ({ children }) => {
 	const [productState, setProductState] = useState({
 		products: [],
 		searchWords: "",
-		emptyMessage: "No se ha realizado ninguna busqueda",
+		emptyMessage: "Realiza una busqueda del producto soñado",
 		productsUpdate: false,
 		productsList: [],
 		offset: 0,
 		limit: 4,
+		displayNav: false,
 	});
 
 	return (

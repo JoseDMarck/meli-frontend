@@ -10,6 +10,7 @@ import { HiOutlineTruck } from "react-icons/hi";
 import defaultImg from "../../assets/images/generals/default.png";
 import Renderif from "../Renderif";
 import { Service } from "../../services/api";
+import PaginationComp from "../../components/pagination/Pagination";
 import ProductNav from "../productNav/ProductNav";
 import ProductContext from "../../context/productContext";
 
@@ -94,6 +95,8 @@ function SearchResults() {
 								</div>
 							);
 						})}
+
+						<PaginationComp />
 					</Renderif>
 
 					<Renderif isTrue={productState.products?.length === 0}>

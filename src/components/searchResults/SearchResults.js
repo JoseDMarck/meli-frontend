@@ -34,7 +34,7 @@ function SearchResults() {
 			setProductState({
 				...productState,
 				products: _search.data.response,
-				isLoaderResults: false,
+				isLoader: false,
 				displayNav: true,
 				searchWords: productState.searchWords,
 			});

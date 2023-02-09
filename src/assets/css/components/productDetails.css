@@ -15,6 +15,40 @@
 	height: auto;
 	position: relative;
 	margin: 0 auto;
+	float: left;
+}
+
+.ml__details .pictureContainer .ant-image {
+	width: 100%;
+	position: relative;
+	display: block;
+	margin: 0 auto;
+}
+
+.ml__details .contentGalery {
+	width: 100px;
+	height: auto;
+	position: relative;
+	margin-right: 20px;
+	float: left;
+}
+
+.ml__details .contentGalery .galleryItem {
+	width: 80px;
+	height: 80px;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+	border: 2px solid #eeeeee;
+	border-radius: 4px;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.ml__details .contentGalery .galleryItem:hover {
+	border: 2px solid #3483fa;
 }
 
 .ml__details .productDetails {

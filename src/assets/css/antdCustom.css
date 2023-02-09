@@ -23,3 +23,8 @@
 	width: 100% !important;
 	height: 100% !important;
 }
+
+.ant-image-preview-img {
+	max-width: 50% !important;
+	max-height: none !important;
+}

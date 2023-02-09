@@ -6,27 +6,7 @@ import ComponentContext from "../context/componentContext";
 import axios from "axios";
 
 const ComponentState = ({ children }) => {
-	const [stateComp, setStateComp] = useState({
-		programModalCreate: false,
-		programModalAdd: false,
-		sealModalCreate: false,
-		sealModalAssign: false,
-		sealModalAction: false,
-		sealModalUpdate: false,
-		sealModalDetails: false,
-		revisionsModalDetails: false,
-		incidentsModalDetails: false,
-		userModalCreate: false,
-		userModalUpdate: false,
-		userModalAction: false,
-		passwordModalUpdate: false,
-		ActionInfo: "",
-		modalMessage: false,
-		modalMessageDescription: "",
-		modalStatus: "success",
-		modalMessageTitle: "",
-		modalMessageInfo: "",
-	});
+	const [stateComp, setStateComp] = useState({});
 
 	return (
 		<ComponentContext.Provider

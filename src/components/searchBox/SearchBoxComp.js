@@ -49,19 +49,6 @@ function SearchBox() {
 	};
 
 	const searchProducts = async () => {
-		// let _search = await Service(
-		// 	"GET",
-		// 	`items/search/pagination/${state?.searchValue}/${productState?.limit}/${productState?.offset}`
-		// );
-		// console.log("search ****", _search);
-
-		// setProductState({
-		// 	...productState,
-		// 	products: _search.data.response,
-		// 	displayNav: true,
-		// 	searchWords: productState.searchWords,
-		// });
-
 		setState({
 			searchValue: "",
 		});
@@ -111,6 +98,10 @@ function SearchBox() {
 								}
 							>
 								<div className="searchList">
+									<div className="suggestions text-2nd-gray">
+										Algunas de nuestras sugerencias:{" "}
+									</div>
+
 									{productState.productsList?.items?.map(
 										(product, index) => {
 											return (

@@ -27,6 +27,7 @@ function SearchResults() {
 	const [state, setState] = useState({
 		likeEffect: "",
 		wishlist: [],
+		querySearch: querySearch,
 	});
 
 	const [wishlist, setWishlist] = useState([]);
@@ -51,7 +52,7 @@ function SearchResults() {
 		if (querySearch) data();
 
 		return () => {};
-	}, []);
+	}, [querySearch]);
 
 	const addToWishlist = (e, product) => {
 		e.stopPropagation();

@@ -22,7 +22,12 @@ function ProductImages() {
 						<Renderif isTrue={index === 0}>
 							<div className="pictureContainer">
 								<div className="contentImage">
-									<img src={img.secure_url} alt={img.id} />
+									<Renderif isTrue={productState?.isLoader}>
+										<img
+											src={img.secure_url}
+											alt={img.id}
+										/>
+									</Renderif>
 								</div>
 							</div>
 						</Renderif>

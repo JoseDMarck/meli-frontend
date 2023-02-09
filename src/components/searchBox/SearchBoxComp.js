@@ -49,18 +49,18 @@ function SearchBox() {
 	};
 
 	const searchProducts = async () => {
-		let _search = await Service(
-			"GET",
-			`items/search/pagination/${state?.searchValue}/${productState?.limit}/${productState?.offset}`
-		);
-		console.log("search ****", _search);
+		// let _search = await Service(
+		// 	"GET",
+		// 	`items/search/pagination/${state?.searchValue}/${productState?.limit}/${productState?.offset}`
+		// );
+		// console.log("search ****", _search);
 
-		setProductState({
-			...productState,
-			products: _search.data.response,
-			displayNav: true,
-			searchWords: productState.searchWords,
-		});
+		// setProductState({
+		// 	...productState,
+		// 	products: _search.data.response,
+		// 	displayNav: true,
+		// 	searchWords: productState.searchWords,
+		// });
 
 		setState({
 			searchValue: "",
@@ -121,8 +121,13 @@ function SearchBox() {
 														onClick={() => {
 															setProductState({
 																...productState,
+																udpateState:
+																	!productState.udpateState,
 																productsID:
 																	product.id,
+																productsList:
+																	[],
+																isLoader: false,
 															});
 															navigate(
 																`/items/${product.id}`

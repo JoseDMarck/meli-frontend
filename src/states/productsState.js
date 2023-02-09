@@ -8,6 +8,7 @@ const ProductState = ({ children }) => {
 		products: [],
 		product: [],
 		isLoader: false,
+		isLoaderResults: false,
 		productsID: "",
 		searchWords: "",
 		emptyMessage: "Realiza una busqueda del producto soñado",
@@ -16,6 +17,7 @@ const ProductState = ({ children }) => {
 		offset: 0,
 		limit: 4,
 		displayNav: false,
+		udpateState: false,
 	});
 
 	return (

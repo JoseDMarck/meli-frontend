@@ -33,7 +33,7 @@ function ProductDetail() {
 		data();
 
 		return () => {};
-	}, []);
+	}, [productState.udpateState]);
 
 	return (
 		<>

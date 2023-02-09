@@ -3,8 +3,8 @@ import { Skeleton } from "antd";
 function LoaderSkeleton() {
 	return (
 		<>
-			<Skeleton activate />
-			<Skeleton activate />
+			<Skeleton active />
+			<Skeleton active />
 		</>
 	);
 }

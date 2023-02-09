@@ -1,20 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useContext, useState } from "react";
 import "antd/dist/antd.css";
-import { Skeleton } from "antd";
-
 import "../../assets/css/components/productDetails.css";
-import { BsHeart } from "react-icons/bs";
+import { Skeleton } from "antd";
 import { Service } from "../../services/api";
-import defaultImg from "../../assets/images/generals/default.png";
+import { useParams } from "react-router-dom";
 import Renderif from "../Renderif";
-
 import GeneralButton from "../buttons/GeneralButton";
 import ProductNav from "../productNav/ProductNav";
 import ProductContext from "../../context/productContext";
 
 function ProductDetail() {
 	const { productState, setProductState } = useContext(ProductContext);
+	const params = useParams();
 
 	const [state, setState] = useState({
 		product: [],
@@ -23,10 +22,7 @@ function ProductDetail() {
 
 	useEffect(() => {
 		const data = async () => {
-			let _product = await Service(
-				"GET",
-				`items/${productState?.productsID}`
-			);
+			let _product = await Service("GET", `items/${params?.id}`);
 			console.log("===PRODUCT ITEM====", _product.data.response.item);
 
 			setState({
@@ -44,6 +40,7 @@ function ProductDetail() {
 		<>
 			<div className="ml__mainContent ml__details bg-3rd-gray">
 				<ProductNav />
+
 				<div className="fullContent bg-white ">
 					{state?.product.pictures?.map((img, index) => {
 						return (
@@ -55,19 +52,12 @@ function ProductDetail() {
 										// 	backgroundImage: `url(${img.secure_url})`,
 										// }}
 									>
-										<Renderif isTrue={!state.isLoader}>
-											<Skeleton active={true} />
-											<Skeleton active={true} />
-										</Renderif>
-
-										<Renderif isTrue={state.isLoader}>
-											<div className="contentImage">
-												<img
-													src={img.secure_url}
-													alt={img.id}
-												/>
-											</div>
-										</Renderif>
+										<div className="contentImage">
+											<img
+												src={img.secure_url}
+												alt={img.id}
+											/>
+										</div>
 									</div>
 								</Renderif>
 							</>

@@ -1,6 +1,6 @@
 .ml__details .pictureContainer {
 	width: 680px;
-	height: 680px;
+	height: auto;
 	position: relative;
 	float: left;
 	background-size: cover;

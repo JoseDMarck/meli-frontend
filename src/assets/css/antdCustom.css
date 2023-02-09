@@ -13,3 +13,13 @@
 	color: #999999 !important;
 	margin-bottom: 30px !important;
 }
+
+.ant-skeleton {
+	width: 80% !important;
+	height: 80% !important;
+}
+
+.ant-skeleton-element .ant-skeleton-image {
+	width: 100% !important;
+	height: 100% !important;
+}

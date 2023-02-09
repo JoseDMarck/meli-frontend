@@ -154,6 +154,18 @@
 	color: #fff;
 }
 
+.whislistIcon {
+	display: inline-block;
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: -40px;
+}
+.whislistIcon svg {
+	font-size: 26px;
+	color: #ca2127;
+}
+
 @media only screen and (max-width: 780px) {
 	.ml__searchBox .content_search {
 		width: 90%;

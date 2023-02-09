@@ -21,6 +21,7 @@ import ProductState from "./states/productsState";
 import UsersState from "./states/userState";
 import ComponentState from "./states/componentState";
 import ModalMessage from "./components/modals/response/MessageModal";
+import WishListDrawer from "./components/searchResults/WishListDrawer";
 
 import Dastboard from "./pages/dashboard/Dashboard";
 import Product from "./pages/product/Product";
@@ -50,6 +51,7 @@ function App() {
 									<ModalMessage />
 
 									<Content>
+										<WishListDrawer />
 										<Routes>
 											<Route
 												exact

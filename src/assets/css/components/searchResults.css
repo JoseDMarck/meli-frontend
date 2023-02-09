@@ -48,6 +48,19 @@
 	}
 }
 
+.likeAnimation {
+	animation: like-animation 2s;
+}
+
+@keyframes like-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(202, 33, 39, 0.2);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(202, 33, 39, 0);
+	}
+}
+
 .itemsResultscontent:hover {
 	box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
@@ -152,6 +165,33 @@
 .categoryITem:last-child:after {
 	content: "";
 	padding: 5px;
+}
+
+.wishListcontent {
+	width: 100%;
+	height: auto;
+	position: relative;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #eeeeee;
+	margin-bottom: 16px;
+	box-shadow: rgba(0, 0, 0, 0) 1.95px 1.95px 2.6px;
+}
+
+.wishListcontent:hover {
+	color: #fff;
+	background-color: #3483fa;
+}
+
+.wishListcontent .picture {
+	width: 100px;
+	height: 100px;
+	position: relative;
+	float: left;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	border-radius: 4px;
+	margin-right: 16px;
 }
 
 @media only screen and (max-width: 680px) {

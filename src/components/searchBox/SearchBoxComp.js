@@ -2,14 +2,17 @@
 import React, { useEffect, useContext, useState } from "react";
 import "antd/dist/antd.css";
 import "../../assets/css/components/searchBox.css";
+import { Badge } from "antd";
 import { BsSearch } from "react-icons/bs";
 import { CgCloseO } from "react-icons/cg";
+import { AiFillHeart } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
 import { Service } from "../../services/api";
 import meliLogo from "../../assets/images/logos/Logo_ML@2x.png";
 import GeneralButton from "../buttons/GeneralButton";
 import Renderif from "../Renderif";
 import ProductContext from "../../context/productContext";
+import WishtListBadge from "./whistListBadge";
 
 function SearchBox() {
 	const navigate = useNavigate();
@@ -161,6 +164,8 @@ function SearchBox() {
 								<BsSearch className="text-1st-gray transition" />
 							</div>
 							<div className="clear"></div>
+
+							<WishtListBadge />
 						</div>
 						<div className="clear"></div>
 					</div>

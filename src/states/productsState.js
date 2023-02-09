@@ -7,7 +7,7 @@ const ProductState = ({ children }) => {
 	const [productState, setProductState] = useState({
 		products: [],
 		product: [],
-		wishList: [],
+		wishListItems: [],
 		isLoader: false,
 		isLoaderResults: false,
 		productsID: "",
@@ -19,6 +19,7 @@ const ProductState = ({ children }) => {
 		limit: 4,
 		displayNav: false,
 		udpateState: false,
+		showWishList: false,
 	});
 
 	return (

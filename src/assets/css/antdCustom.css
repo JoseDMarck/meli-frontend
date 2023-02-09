@@ -28,3 +28,8 @@
 	max-width: 50% !important;
 	max-height: none !important;
 }
+
+.ant-badge-count {
+	top: 5px !important;
+	right: -7px !important;
+}

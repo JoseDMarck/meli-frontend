@@ -23,6 +23,13 @@ function SearchResults() {
 
 	const { productState, setProductState } = useContext(ProductContext);
 
+	const [state, setState] = useState({
+		likeEffect: "",
+		wishlist: [],
+	});
+
+	const [wishlist, setWishlist] = useState([]);
+
 	useEffect(() => {
 		const data = async () => {
 			let _search = await Service(
@@ -45,6 +52,37 @@ function SearchResults() {
 		return () => {};
 	}, []);
 
+	const addToWishlist = (e, product) => {
+		e.stopPropagation();
+		console.log("wishzlist", product);
+
+		setState((state) => ({
+			likeEffect: "likeAnimation",
+		}));
+
+		//setWishlist([...wishlist, product]);
+
+		setProductState({
+			...productState,
+			wishListItems: [...productState.wishListItems, product],
+		});
+
+		// setWishlist((state) => {
+		// 	console.log("setWishlist *** ", state);
+
+		// 	setProductState({
+		// 		...productState,
+		// 		wishListItems: state,
+		// 	});
+		// 	return state;
+		// });
+
+		setTimeout(() => {
+			setState({
+				likeEffect: "",
+			});
+		}, 1000);
+	};
 	return (
 		<>
 			<div className="ml__mainContent bg-3rd-gray">
@@ -72,7 +110,12 @@ function SearchResults() {
 												backgroundImage: `url(${product.picture})`,
 											}}
 										>
-											<div className="likeIcon transition">
+											<div
+												className={`likeIcon transition ${state.likeEffect}`}
+												onClick={(e) => {
+													addToWishlist(e, product);
+												}}
+											>
 												<BsHeart />
 											</div>
 										</div>

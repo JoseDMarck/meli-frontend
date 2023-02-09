@@ -14,6 +14,7 @@ import ProductContext from "../../context/productContext";
 import ProductInfo from "./ProductInfo";
 import ProductDescription from "./ProductDescription";
 import ProductImages from "./ProductImages";
+import Seo from "../../components/SEO/Seo";
 
 function ProductDetail() {
 	const { productState, setProductState } = useContext(ProductContext);
@@ -37,6 +38,11 @@ function ProductDetail() {
 
 	return (
 		<>
+			<Seo
+				title={productState?.product.title}
+				description={productState?.product.description}
+				image={productState?.product.picture}
+			/>
 			<div className="ml__mainContent ml__details bg-3rd-gray">
 				<ProductNav />
 

@@ -75,6 +75,8 @@ function SearchBox() {
 			...productState,
 			displayNav: false,
 			products: [],
+			product: [],
+			isLoader: false,
 		});
 	};
 

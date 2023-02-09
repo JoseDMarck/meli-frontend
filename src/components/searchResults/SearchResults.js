@@ -21,7 +21,8 @@ function SearchResults() {
 	const search = useLocation().search;
 	const querySearch = new URLSearchParams(search).get("search");
 
-	const { productState, setProductState } = useContext(ProductContext);
+	const { productState, setProductState, setWishList } =
+		useContext(ProductContext);
 
 	const [state, setState] = useState({
 		likeEffect: "",
@@ -54,28 +55,19 @@ function SearchResults() {
 
 	const addToWishlist = (e, product) => {
 		e.stopPropagation();
-		console.log("wishzlist", product);
-
 		setState((state) => ({
 			likeEffect: "likeAnimation",
 		}));
-
-		//setWishlist([...wishlist, product]);
 
 		setProductState({
 			...productState,
 			wishListItems: [...productState.wishListItems, product],
 		});
 
-		// setWishlist((state) => {
-		// 	console.log("setWishlist *** ", state);
-
-		// 	setProductState({
-		// 		...productState,
-		// 		wishListItems: state,
-		// 	});
-		// 	return state;
-		// });
+		localStorage.setItem(
+			"whislist",
+			JSON.stringify([...productState.wishListItems, product])
+		);
 
 		setTimeout(() => {
 			setState({

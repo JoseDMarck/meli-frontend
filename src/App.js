@@ -16,6 +16,7 @@ import "./assets/css/grids.css";
 import Renderif from "./components/Renderif";
 import AuthState from "./states/authState";
 import AuthContext from "./context/authContext";
+import ProductContext from "./context/productContext";
 import ProductState from "./states/productsState";
 
 import UsersState from "./states/userState";
@@ -95,8 +96,10 @@ function AdminRoutes() {
 
 function RolRouter() {
 	const { user } = useContext(AuthContext);
+	const { wishListItems } = useContext(ProductContext);
 
 	console.log("=========USER========", user);
+	console.log("=========WISHLIST========", wishListItems);
 
 	return (
 		<>

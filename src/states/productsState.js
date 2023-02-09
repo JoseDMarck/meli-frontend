@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 
-import React, { useReducer, useState } from "react";
+import React, { useReducer, useState, useEffect } from "react";
 import ProductContext from "../context/productContext";
 
 const ProductState = ({ children }) => {
@@ -22,11 +22,25 @@ const ProductState = ({ children }) => {
 		showWishList: false,
 	});
 
+	useEffect(() => {
+		let _wishlist = localStorage.getItem("whislist");
+		let wishlist = JSON.parse(_wishlist);
+		if (_wishlist) {
+			productState.user = wishlist;
+			setProductState({ ...productState });
+		}
+	}, []);
+
+	const setWishList = (wishListItems) => {
+		setProductState({ ...productState, wishListItems: wishListItems });
+	};
+
 	return (
 		<ProductContext.Provider
 			value={{
 				...productState,
 				productState,
+				setWishList,
 				setProductState,
 			}}
 		>

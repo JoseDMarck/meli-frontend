@@ -12,7 +12,7 @@
 
 .ml__details .pictureContainer .contentImage {
 	width: 70%;
-	height: auto;
+	max-height: 680px;
 	position: relative;
 	margin: 0 auto;
 	float: left;
@@ -45,6 +45,13 @@
 	overflow: hidden;
 	position: relative;
 	margin-bottom: 10px;
+}
+
+.ml__details .contentGalery .galleryItem .othersSliders {
+	text-align: center;
+	font-size: 32px;
+	position: relative;
+	top: 14px;
 }
 
 .ml__details .contentGalery .galleryItem:hover {
@@ -103,4 +110,96 @@
 	font-size: 16px;
 	line-height: 22px;
 	margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 1180px) {
+	.ml__details .pictureContainer {
+		width: 60%;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.ml__details .productDetails {
+		width: 30%;
+		height: auto;
+	}
+	.ml__details .productTitle {
+		font-size: 20px;
+		line-height: 26px;
+	}
+
+	.ml__details .producPrice {
+		font-size: 36px;
+		line-height: 36px;
+	}
+	.ml__details .contentGalery {
+		width: 60px;
+	}
+	.ml__details .contentGalery .galleryItem {
+		width: 60px;
+		height: 60px;
+	}
+
+	.ml__details .productDescription .descriptionTitle {
+		font-size: 24px;
+		line-height: 24px;
+	}
+	.ml__details .productDescription .descriptionInfo {
+		font-size: 14px;
+		line-height: 18px;
+	}
+	.ml__details .contentGalery .galleryItem .othersSliders {
+		font-size: 26px;
+		top: 7px;
+	}
+}
+
+@media only screen and (max-width: 680px) {
+	.ml__details .productDetails {
+		width: 95%;
+		margin-bottom: 30px;
+	}
+	.ml__details .productTitle {
+		margin-bottom: 10px;
+	}
+	.ml__details .producPrice {
+		margin-bottom: 20px;
+	}
+
+	.ml__details .productDescription {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	.ml__details .pictureContainer {
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+		float: none;
+	}
+
+	.ml__details .contentGalery {
+		width: 40px;
+	}
+	.ml__details .contentGalery .galleryItem {
+		width: 40px;
+		height: 40px;
+	}
+
+	.ml__details .contentGalery .galleryItem .othersSliders {
+		font-size: 18px;
+		top: 4px;
+	}
+	.ml__details .pictureContainer .contentImage {
+		width: 80%;
+		max-height: 680px;
+	}
+}
+
+@media only screen and (max-width: 380px) {
+	.ml__details .pictureContainer .contentImage {
+		width: 75%;
+		height: auto;
+	}
 }

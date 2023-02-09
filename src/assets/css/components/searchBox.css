@@ -153,3 +153,36 @@
 .ml__searchBox .searchList li:hover svg {
 	color: #fff;
 }
+
+@media only screen and (max-width: 780px) {
+	.ml__searchBox .content_search {
+		width: 90%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.ml__searchBox .closeIcon {
+		right: 10%;
+	}
+}
+
+@media only screen and (max-width: 480px) {
+	.ml__searchBox .content_search {
+		width: 95%;
+		height: auto;
+		margin: 0 auto;
+	}
+
+	.ml__searchBox .inputBlock {
+		width: 100%;
+	}
+
+	.ml__searchBox .center_content .logo {
+		float: none;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.ml__searchBox .closeIcon {
+		right: 50px;
+	}
+}

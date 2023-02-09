@@ -139,3 +139,53 @@
 	height: auto;
 	margin-bottom: 20px;
 }
+
+.categoryITem {
+	display: inline-block;
+}
+
+.categoryITem::after {
+	content: ">";
+	padding: 5px;
+}
+
+.categoryITem:last-child:after {
+	content: "";
+	padding: 5px;
+}
+
+@media only screen and (max-width: 680px) {
+	.itemsResultscontent .productDetails .price {
+		font-size: 26px;
+		line-height: 26px;
+	}
+
+	.itemsResultscontent .productDetails .title {
+		width: 100%;
+		height: auto;
+		position: relative;
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.itemsResultscontent .productDetails .other_info {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+@media only screen and (max-width: 540px) {
+	.itemsResultscontent .seller_info {
+		display: none;
+	}
+	.itemsResultscontent .picture {
+		float: none;
+		margin: 0 auto;
+	}
+
+	.itemsResultscontent .productDetails {
+		width: 100%;
+		height: auto;
+		position: relative;
+		float: none;
+	}
+}

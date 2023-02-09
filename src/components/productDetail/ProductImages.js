@@ -36,17 +36,41 @@ function ProductImages() {
 														productState?.isLoader
 													}
 												>
-													<div
-														className="galleryItem transition pointer"
-														style={{
-															backgroundImage: `url(${img.secure_url})`,
-														}}
-														onClick={() => {
-															setState({
-																imgIndex: index,
-															});
-														}}
-													></div>
+													<Renderif
+														isTrue={index <= 5}
+													>
+														<div
+															className="galleryItem transition pointer"
+															style={{
+																backgroundImage: `url(${img.secure_url})`,
+															}}
+															onClick={() => {
+																setState({
+																	imgIndex:
+																		index,
+																});
+															}}
+														></div>
+													</Renderif>
+
+													<Renderif
+														isTrue={index === 6}
+													>
+														<div className="galleryItem transition pointer">
+															<div
+																className="othersSliders text-blue"
+																style={{
+																	backgroundImage: `url(${img.secure_url})`,
+																}}
+															>
+																+{" "}
+																{productState
+																	?.product
+																	.pictures
+																	.length - 5}
+															</div>
+														</div>
+													</Renderif>
 												</Renderif>
 											);
 										}

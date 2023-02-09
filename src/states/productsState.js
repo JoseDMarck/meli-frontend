@@ -7,6 +7,7 @@ const ProductState = ({ children }) => {
 	const [productState, setProductState] = useState({
 		products: [],
 		product: [],
+		wishList: [],
 		isLoader: false,
 		isLoaderResults: false,
 		productsID: "",

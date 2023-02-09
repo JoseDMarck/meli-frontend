@@ -12,9 +12,13 @@ function ProductNav() {
 		<>
 			<div className="navDetail text-2nd-gray	">
 				<Renderif isTrue={productState.displayNav}>
-					{
-						"Electronica, audio y video > Pod > Repoductores > iPod Touch > 32Gb "
-					}
+					{productState.products?.categories?.map((cat, index) => {
+						return (
+							<>
+								<span className="categoryITem">{cat}</span>
+							</>
+						);
+					})}
 				</Renderif>
 			</div>
 		</>
